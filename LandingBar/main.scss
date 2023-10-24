@@ -1,0 +1,575 @@
+﻿@import "common.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "poster.scss";
+@import "gallery.scss";
+
+#presentation {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 120px;
+
+  .tabs {
+    display: flex;
+  }
+  .tab-images {
+    display: flex;
+  }
+  .images {
+    justify-content: center;
+    align-items: center;
+    background-color: #d5621d1a;
+    gap: 26px;
+    grid-template-columns: 1fr 1fr;
+    padding: 39px 35px 37px 35px;
+
+    &.visible-images {
+      display: grid;
+    }
+    &.invisible-images {
+      display: none;
+    }
+  }
+  .tab {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    border-radius: 5px 5px 0px 0px;
+    padding: 12px 10px 7px 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &.pressed-tab {
+      background-color: #d5621d1a;
+    }
+    &.unpressed-tab {
+      background-color: #d5621d0d;
+    }
+  }
+
+  .left-side {
+    position: relative;
+
+    .letter {
+      position: absolute;
+      left: 60px;
+      bottom: 45px;
+    }
+
+    .div-since {
+      background-color: white;
+      color: black;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+      width: 154px;
+      padding: 10px 20px 7px 20px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+#menu {
+  .section-footer {
+    text-align: center;
+  }
+  .slider-menu-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .menu-container {
+    position: relative;
+    margin-bottom: 96px;
+    z-index: -1;
+    left: 0;
+    transition: all ease 1s;
+  }
+  .slider-left {
+    left: 1%;
+    top: 40%;
+  }
+  .slider-right {
+    left: 95%;
+    top: 40%;
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px 0;
+    padding-left: 110px;
+  }
+  .menu-item {
+    width: 596px;
+    display: flex;
+    gap: 25px;
+    img {
+      width: 110px;
+      height: 110px;
+    }
+  }
+  .item-name-price {
+    display: flex;
+    justify-content: space-between;
+    font-family: $main-font;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+
+    span {
+      font-size: 18px;
+      line-height: 27px;
+      padding: 5.5px 0;
+    }
+
+    .price {
+      padding: 8px 18px 5px 18px;
+      border-radius: 5px;
+      border: 2px solid #d5621d;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  .item-weight {
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #d5621d;
+    margin-bottom: 10px;
+  }
+  .item-description {
+    width: 351px;
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+}
+
+#events-tourists {
+  display: flex;
+  gap: 44px;
+  align-items: start;
+
+  .side-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    h2 {
+      padding-top: 5px;
+      padding-bottom: 0;
+    }
+
+    article {
+      width: 376px;
+      font-family: $secondary-font;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: center;
+
+      p {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+#techrider {
+  .rider-content {
+    display: flex;
+    justify-content: center;
+    gap: 134px;
+  }
+
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .dropdown-menu {
+    width: 526px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 20px 40px 20px 40px;
+    border-radius: 5px;
+    background-color: #d5621d1a;
+
+    &.opened {
+      background-color: #d5621d;
+    }
+
+    .top-lane {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .content {
+      display: none;
+      padding-top: 20px;
+      text-transform: none;
+      font-family: $secondary-font;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 32px;
+
+      &.opened {
+        background-color: #d5621d;
+        display: block;
+      }
+    }
+
+
+  }
+
+  .right-side {
+    letter-spacing: 0.05em;
+    h3 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 48px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+    }
+    .right-grid {
+      display: grid;
+      gap: 25px 24px;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    span {
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+  }
+}
+
+@media (min-width: 851px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .container {
+    margin-bottom: 50px;
+  }
+
+  .lead {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 10px 20px 7px 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    padding: 20px 0 20px 0;
+  }
+
+  header {
+    position: relative;
+    padding: 10px 40px 10px 10px;
+    margin-bottom: 30px;
+    .header-img {
+      width: 118px;
+    }
+    nav {
+      position: absolute;
+      flex-direction: column;
+      align-items: end;
+      gap: 10px;
+      top: 50px;
+      right: 0;
+      transition: all 0.8s ease;
+      transform: translateX(100%);
+
+      &.visible {
+        transform: translateX(-10px);
+      }
+    }
+  }
+
+  .btn {
+    padding: 8px 16px;
+
+    &.fill {
+      display: inline-block;
+      background-color: $button-color;
+      font-size: 8px;
+      font-weight: 700;
+      line-height: 12px;
+      letter-spacing: 0.05em;
+    }
+    &.unfill {
+      border: 1px solid $button-color;
+      font-family: $secondary-font;
+      font-size: 8px;
+      font-weight: 400;
+      line-height: 12px;
+    }
+  }
+
+  .icon-button {
+    position: absolute;
+    right: 10px;
+  }
+
+  .slider {
+    width: 30px;
+    height: 30px;
+
+    img {
+      position: absolute;
+      left: 30%;
+      top: 30%;
+      height: 50%;
+      width: 50%;
+    }
+  }
+
+  #presentation {
+    margin-bottom: 50px;
+    padding: 0 10px;
+    img {
+      height: 180px;
+      width: 140px;
+    }
+
+    .tab {
+      font-size: 12px;
+      line-height: 12px;
+    }
+    .images {
+      padding: 10px;
+      gap: 10px;
+    }
+  }
+
+  #menu {
+    .slider-menu-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .menu-container {
+      margin-bottom: 40px;
+      gap: 10px;
+    }
+    .menu-grid > .menu-item:nth-child(n+5) {
+      display: none;
+    }
+    .menu-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 0;
+    }
+    .menu-item {
+      gap: 10px;
+      width: auto;
+      img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+    .item-name-price {
+      span {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 5.5px 0;
+      }
+
+      .price {
+        padding: 5px 14px 5px 14px;
+        border-radius: 5px;
+        border: 2px solid #d5621d;
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+
+    .item-weight {
+      font-family: $secondary-font;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 16px;
+      color: #d5621d;
+      margin-bottom: 0;
+    }
+    .item-description {
+      width: 200px;
+      font-family: $secondary-font;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+
+  #events-tourists {
+    padding: 0 10px;
+    flex-direction: column;
+    gap: 30px;
+
+    .side-item {
+      gap: 20px;
+
+      h2 {
+        padding-top: 5px;
+        padding-bottom: 0;
+      }
+
+      article {
+        width: auto;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+
+        p {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+
+  #techrider {
+    .rider-content {
+      flex-direction: column;
+      gap: 40px;
+      padding: 0 10px;
+    }
+    .left-side {
+      gap: 10px;
+    }
+    .dropdown-menu {
+      max-width: 300px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 18px;
+      padding: 10px 20px;
+
+      &.closed {
+        background-color: #d5621d1a;
+      }
+
+      &.opened {
+        background-color: #d5621d;
+        .content {
+          padding-top: 10px;
+          text-transform: none;
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
+    }
+    .right-side {
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        margin-bottom: 40px;
+      }
+
+      .right-grid {
+        gap: 15px;
+      }
+      .dj-photo {
+        width: 150px;
+        height: auto;
+        justify-self: center;
+        align-self: center;
+      }
+    }
+  }
+  footer {
+    margin-bottom: 20px;
+    .footer-content {
+      margin: 0 10px 50px;
+
+      .left-side {
+        border: 2px solid #d5621d;
+        background-color: #d5621d1a;
+        padding: 28px;
+
+        h4 {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0.05em;
+          margin-bottom: 10px;
+        }
+
+        .text {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          margin-bottom: 15px;
+        }
+
+        .text:last-child {
+          margin-bottom: 0;
+        }
+
+        .top-content {
+          margin-bottom: 25px;
+        }
+        .bottom-content {
+          margin-top: 25px;
+        }
+      }
+    }
+    .dividing-line {
+      margin: 0 10px;
+    }
+
+    .underline-text {
+      padding: 10px;
+
+      span {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+  }
+}
