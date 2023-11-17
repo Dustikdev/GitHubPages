@@ -55,6 +55,7 @@ body h5 {
 .left-section .left-section-content .icons-container {
   margin: 10px 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   align-items: center;
 }
@@ -129,7 +130,6 @@ body h5 {
   }
   .left-section .left-section-content .icons-container {
     margin: 5px 0;
-    flex-wrap: wrap;
     gap: 5px;
   }
   .left-section .left-section-content .icons-container .icons-img {
