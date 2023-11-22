@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 20px 140px;
   .content-sections {
+    max-width: 1440px;
     padding: 20px;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -50,6 +51,10 @@ body {
   color: #ffffff;
   .left-section-content {
     padding: 30px;
+    .left-image {
+      max-width: 250px;
+      max-height: 250px;
+    }
     .icons-container {
       margin: 10px 0;
       display: flex;

@@ -12,6 +12,7 @@ body {
   padding: 20px 140px;
 }
 body .content-sections {
+  max-width: 1440px;
   padding: 20px;
   display: grid;
   grid-template-columns: 30% 70%;
@@ -51,6 +52,10 @@ body h5 {
 }
 .left-section .left-section-content {
   padding: 30px;
+}
+.left-section .left-section-content .left-image {
+  max-width: 250px;
+  max-height: 250px;
 }
 .left-section .left-section-content .icons-container {
   margin: 10px 0;
